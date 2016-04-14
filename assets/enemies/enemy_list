@@ -1,0 +1,23 @@
+List of possible enemy types:
+(Depends on how many Cam is willing to artify)
+
+-Normal:
+	-Just normal everything
+	-Drops some mediocre value of gold
+	-Random chance to drop a 'meh' weapon
+	-Normal health
+
+-Tank:
+	-Larger size
+	-Drops a decent amount of gold
+	-Random chance to drop a 'Ooo!' weapon
+	-Slower movement
+	-More health (~2x)
+
+-Ranged:
+	-Normal size
+	-Drops mediocre gold
+	-Random chance to drop a 'meh' weapon
+	-Lower health
+	-Uses ranged attacks
+
