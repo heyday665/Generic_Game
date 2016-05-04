@@ -1,9 +1,8 @@
 all:
-	echo "GenericGame made by John Dacey and Cameron Nelson"
+	@echo "GenericGame made by John Dacey and Cameron Nelson"
 	
 build:
 	g++-4.9 -Wall -O3 source/generic.cpp source/Game.cpp -o Generic.out -lsfml-graphics -lsfml-window -lsfml-system
-	@mv *.out binaries/
 
 run:
 	@./binaries/Generic.out

@@ -1,4 +1,7 @@
 #include "Game.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Tile.h"
 
 void Game::Start() {
 	if(_gameState != Uninit)
@@ -21,13 +24,25 @@ bool Game::IsExiting() {
 		return false;
 }
 
+void Game::drawMap(Tile a) {
+	//
+}
+
 void Game::GameLoop() {
 	sf::Event currentEvent;
+	_mainWindow.clear(sf::Color(0,0,0));
 	while (_mainWindow.pollEvent(currentEvent)){
 		switch(_gameState) {
 			case Game::Playing:
 				{
-					_mainWindow.clear(sf::Color(255,0,0));
+					if (currentEvent.type == sf::Event::KeyPressed){
+						if (currentEvent.key.code == sf::Keyboard::Left)
+							_mainWindow.clear(sf::Color(255,0,0));
+						if (currentEvent.key.code == sf::Keyboard::Right)
+							_mainWindow.clear(sf::Color(0,255,0));
+						if (currentEvent.key.code == sf::Keyboard::Down)
+							_mainWindow.clear(sf::Color(0,0,255));
+					}
 					_mainWindow.display();
 
 					if (currentEvent.type == sf::Event::Closed) {
