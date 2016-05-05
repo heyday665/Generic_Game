@@ -53,10 +53,22 @@ void Game::GameLoop() {
 					if (currentEvent.type == sf::Event::KeyPressed){
 						if (currentEvent.key.code == sf::Keyboard::Left)
 							//_mainWindow.clear(sf::Color(255,0,0));
+							player1.sprite.scale(sf::Vector2f(0.5f, 0.5f));
 						if (currentEvent.key.code == sf::Keyboard::Right)
 							//_mainWindow.clear(sf::Color(0,255,0));
-						if (currentEvent.key.code == sf::Keyboard::Down)
-							//_mainWindow.clear(sf::Color(0,0,255));
+							player1.sprite.scale(sf::Vector2f(2.f, 2.f));
+						if (currentEvent.key.code == sf::Keyboard::A){
+							player1.mov_LEFT();
+						}
+						if (currentEvent.key.code == sf::Keyboard::D){
+							player1.mov_RIGHT();
+						}
+						if (currentEvent.key.code == sf::Keyboard::W){
+							player1.mov_UP();
+						}
+						if (currentEvent.key.code == sf::Keyboard::S){
+							player1.mov_DOWN();
+						}
 					}
 					_mainWindow.draw(player1.sprite);
 					_mainWindow.display();

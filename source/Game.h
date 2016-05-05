@@ -13,6 +13,7 @@ class Game {
 		static bool IsExiting();
 		static void GameLoop();
 		static void drawMap(Tile a);
+		static void loadMap(string a);
 
 		enum GameState {Uninit, Splash, Paused, Menu, Playing, Closing};
 
