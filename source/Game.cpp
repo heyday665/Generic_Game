@@ -24,6 +24,14 @@ bool Game::IsExiting() {
 		return false;
 }
 
+void Game::loadMap(string a){
+	for(int i=0; i<50; i++){
+		for(int j=0; j<25; j++){
+			//
+		}
+	}
+}
+
 void Game::drawMap(Tile a) {
 	//
 }
@@ -31,18 +39,26 @@ void Game::drawMap(Tile a) {
 void Game::GameLoop() {
 	sf::Event currentEvent;
 	_mainWindow.clear(sf::Color(0,0,0));
+	_mainWindow.setVerticalSyncEnabled(true);
+
+	Player player1;
+	Enemy enemies[10];
+	char cmap[50][25];
+	Tile tmap[50][25];
+
 	while (_mainWindow.pollEvent(currentEvent)){
 		switch(_gameState) {
 			case Game::Playing:
 				{
 					if (currentEvent.type == sf::Event::KeyPressed){
 						if (currentEvent.key.code == sf::Keyboard::Left)
-							_mainWindow.clear(sf::Color(255,0,0));
+							//_mainWindow.clear(sf::Color(255,0,0));
 						if (currentEvent.key.code == sf::Keyboard::Right)
-							_mainWindow.clear(sf::Color(0,255,0));
+							//_mainWindow.clear(sf::Color(0,255,0));
 						if (currentEvent.key.code == sf::Keyboard::Down)
-							_mainWindow.clear(sf::Color(0,0,255));
+							//_mainWindow.clear(sf::Color(0,0,255));
 					}
+					_mainWindow.draw(player1.sprite);
 					_mainWindow.display();
 
 					if (currentEvent.type == sf::Event::Closed) {

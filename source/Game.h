@@ -16,10 +16,6 @@ class Game {
 
 		enum GameState {Uninit, Splash, Paused, Menu, Playing, Closing};
 
-		Player player1;
-		Enemy enemies[10];
-		Tile map[65][35];
-
 		static GameState _gameState;
 		static sf::RenderWindow _mainWindow;
 };

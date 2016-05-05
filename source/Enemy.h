@@ -4,13 +4,15 @@ using namespace std;
 
 class Enemy {
 	public:
+		
+		void setType(int a);
 		void mov();
 		void attack();
 		void takeDamage(int delta);
 		int getHealth();
 		int getMaxHealth();
 		//string 
-		Enemy(string type, string ifile);
+		Enemy();
 
 	private:
 		int x, y;

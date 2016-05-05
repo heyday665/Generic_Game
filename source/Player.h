@@ -1,4 +1,6 @@
 #pragma once
+#include "SFML/Window.hpp"
+#include "SFML/Graphics.hpp"
 
 class Player {
 	public:
@@ -11,6 +13,7 @@ class Player {
 		void healDamage(int delta);
 		int getHealth();
 		int getMaxHealth();
+		sf::Sprite sprite;
 		Player();
 
 	private:
@@ -22,6 +25,7 @@ class Player {
 		int currentWeapon;
 			//Weapons start at 0 and go to 16
 		int currentArmor;
+		sf::Texture tex;
 };
 /*
 Player::Player(void){

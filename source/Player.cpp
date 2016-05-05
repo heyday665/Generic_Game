@@ -7,6 +7,9 @@ Player::Player(void){
 	this->maxHealth = 10;
 	this->currentHealth = 10;
 	this->currentWeapon = 0;
+	if (!(this->tex.loadFromFile("assets/player/mc.png")))
+		//std::cerr << "Shit broke fam";
+	sprite.setTexture(tex);
 }
 
 void Player::mov_UP(void){
@@ -38,7 +41,7 @@ void Player::takeDamage(int delta){
 
 void Player::healDamage(int delta){
 	int temp = this->currentHealth;
-	this->currenthealth = temp + this->currentHealth;
+	this->currentHealth = temp + this->currentHealth;
 	if (this->currentHealth > this->maxHealth)
 		this->currentHealth = this->maxHealth;
 }
