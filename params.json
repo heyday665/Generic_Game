@@ -1,0 +1,6 @@
+{
+  "name": "Hero",
+  "tagline": "The repository for the (WIP) story driven rogue-like with the title of ''Hero'",
+  "body": "# Hero\r\nHero is a work-in-progress Rogue-like being developed by Jack Dacey and Cameron Nelson as part of a project for CS2311 at Landmark College. The game will be a fairly standard rogue-like with the old-fashioned 'turn-based' movement system from the original rogue, however Hero will incorporate real-time elements in it's combat.\r\n\r\n## What currently works:\r\nVery little. What is in development now is just an extremely basic tech demo that has no gameplay at all.\r\n\r\n## What to expect:\r\nThis game was idealized as part of a game-design / game-story course, and is unlikely to be finished by it's original creators. We will work through the semester on it, and may return to it when it is a less stressful project in the future. If we go dark, all of the content here is free (gratis and libre) for anyone to use as they see fit. \r\n\r\n## Who's doing what:\r\n-The disgusting programming: Jack Dacey   \r\n-The beautiful art: Cameron Nelson",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
